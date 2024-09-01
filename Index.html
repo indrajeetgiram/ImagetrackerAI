@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Recognition Learning App</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <!-- Link to custom styles -->
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Learn English with Images</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Image upload and camera capture option -->
+          <input
+            type="file"
+            id="imageUpload"
+            accept="image/*"
+            capture="environment"
+            class="form-control mb-3"
+          />
+          <button class="btn btn-primary btn-block" onclick="detectImage()">
+            Detect Image
+          </button>
+          <div id="result" class="result-display mt-4 text-center"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
